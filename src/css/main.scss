@@ -1,0 +1,266 @@
+@import "mq";
+@import "fonts";
+@import 'bower_components/guss-grid-system/_grid-system.scss';
+@import 'palette';
+$bg-color: $news-main-2;
+
+$rollover-transition: 500ms;
+// Uncomment for embeds
+//@import "embed";
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+body {
+    margin: 0 !important;
+}
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+.gv-card-wrapper {
+    position: relative;
+    width: 100%;
+    overflow:hidden;
+    
+    ul,li{
+        height:220px;
+
+        @include mq (mobileLandscape){
+            height:360px;
+        }
+
+        @include mq (desktop){
+            height:480px;
+        }
+
+        @include mq (1140px){
+            height:510px;
+        }
+    }
+    //$neutral-6
+    ul {
+	    list-style-type: none !important;
+	    margin: 0  !important;
+	    padding: 0 !important;
+	    
+	    width:100%;
+	    background-color: none;
+
+	}
+    li:nth-child( n+1 ){
+    		border-left:1px solid #FFF;
+    }
+	li { 
+		// display: block;
+		float:left;
+	    width:19.65%;
+		cursor:pointer;
+	}    
+}
+
+.gv-nav-btn{
+        height: 84px;
+        margin-top: 130px;
+        padding:3px;
+
+
+        @include mq(mobileLandscape){
+            height: 240px;
+            margin-top:240px;
+            padding:10px;
+        }
+
+        @include mq (desktop){
+            margin-top:320px;
+        }
+
+        background-color:rgba(0,0,0,0.8);
+
+         -webkit-transition: background-color $rollover-transition linear;
+        -moz-transition: background-color $rollover-transition linear;
+        -o-transition: background-color $rollover-transition linear;
+        -ms-transition: background-color $rollover-transition linear;
+        transition: background-color $rollover-transition linear;
+
+}
+
+.gv-nav-label{
+
+    @include fs-textSans(1);
+        font-size: 11px;
+        line-height:15px;
+        font-weight: 200;
+        color:#FFF;
+        min-height:30px;
+
+        @include mq(360px){
+            font-size: 12px;
+            line-height:16px;
+        }
+
+        @include mq(mobileLandscape){
+           
+           @include fs-textSans(3);
+           @include f-Egyptian; 
+            font-size:18px;
+            line-height:24px;
+            font-weight: 200;
+            min-height:48px;
+        }
+
+        @include mq(tablet){
+         @include f-Egyptian; 
+          min-height:56px;
+            font-size:21px;
+           line-height:28px;
+           font-weight: 200;
+        }
+
+        @include mq(desktop){
+           @include f-Egyptian; 
+           min-height:72px;
+           font-size:27px;
+           line-height:36px;
+           font-weight: 200;
+        }
+
+        @include mq (1140px){
+           @include f-Egyptian; 
+           font-size:36px;
+           line-height:42px;
+           font-weight: 200;
+           min-height:84px;
+        }
+
+}
+
+.gv-hover{
+   background-color: rgba( $news-main-2, 0.9);
+
+   -webkit-transition: background-color $rollover-transition linear;
+    -moz-transition: background-color $rollover-transition linear;
+    -o-transition: background-color $rollover-transition linear;
+    -ms-transition: background-color $rollover-transition linear;
+    transition: background-color $rollover-transition linear;
+}
+
+
+.gv-nav-cta{
+		height:36px;
+		width:36px;
+		margin-top:12px;
+        vertical-align: bottom;
+		background-color:none;
+		border:1px solid #FFF;
+		border-radius:1000px;
+		background-image: url('<%= path %>/assets/ux-down-arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+
+        @include mq(mobileLandscape){
+            margin-top:12px;
+        }
+
+        @include mq(tablet){
+            margin-top:9px;
+        }
+
+        @include mq(desktop){
+            margin-top:24px;
+            height:45px;
+            width:45px;
+            background-size: 42px;
+        }
+         @include mq(wide){
+            margin-top:36px;
+
+        }
+	}
+.gv-EmmanuelMacron {
+    
+    background: url('<%= path %>/assets/images/slices_med/macron.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include mq(tablet){
+        background: url('<%= path %>/assets/images/slices_med/macron.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }   
+     @include mq(wide){
+        background: url('<%= path %>/assets/images/slices_lge/macron.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+
+  
+}
+
+.gv-FrancoisFillon {
+    
+    background: url('<%= path %>/assets/images/slices_med/fillon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include mq(tablet){
+        background: url('<%= path %>/assets/images/slices_med/fillon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }   
+     @include mq(wide){
+        background: url('<%= path %>/assets/images/slices_lge/fillon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    } 
+
+}
+
+.gv-MarineLePen {
+    background: url('<%= path %>/assets/images/slices_med/lepen.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include mq(tablet){
+        background: url('<%= path %>/assets/images/slices_med/lepen.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }   
+     @include mq(wide){
+        background: url('<%= path %>/assets/images/slices_lge/lepen.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }  
+
+}
+
+.gv-BenoitHamon {
+    background: url('<%= path %>/assets/images/slices_med/hamon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include mq(tablet){
+        background: url('<%= path %>/assets/images/slices_med/hamon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }   
+     @include mq(wide){
+        background: url('<%= path %>/assets/images/slices_lge/hamon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }  
+}
+
+.gv-Jean-LucMelenchon {
+    background: url('<%= path %>/assets/images/slices_med/melenchon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @include mq(tablet){
+        background: url('<%= path %>/assets/images/slices_med/melenchon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }   
+     @include mq(wide){
+        background: url('<%= path %>/assets/images/slices_lge/melenchon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }  
+}
+
