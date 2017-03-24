@@ -1,0 +1,75 @@
+.back-to-top-button {
+        position : fixed;
+        width: gs-height(1);
+        height:  gs-height(1); 
+        left:calc(50% - 18px);
+        margin: $gs-baseline 0 gs-height(1);
+        background-color: $guardian-brand;
+        cursor: pointer;
+        bottom: gs-height(1); 
+       
+        border-radius: 22px;
+        
+        z-index: 999999999999999999;
+        opacity: 1;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        -o-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in;
+
+        span {
+            display: none;
+        }
+
+        svg {
+            fill: #fff;
+            padding-top: 6px;
+                padding-left: 7px;
+        }
+
+        &.fade {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @include mq(tablet) {
+               color: #fff;
+               width: 130px;
+               height: 33px; 
+               left:20px;
+               @include fs-textSans(3)
+  
+            text-align: left;
+
+                 svg {
+                // position: absolute;
+                // right: 0;
+                // top: 0;
+                padding-top: 6px;
+                padding-left: 0;
+                padding-right: 9px;
+                float: right;
+                }
+               
+                span {
+
+                padding: 7px 0 0 14px;
+                display: inline-block;
+                }
+
+        }
+
+        @include mq(desktop) {
+               left:160px;
+        }
+
+         @include mq(wide) {
+               left:240px;
+        }
+
+}
+
+.back-to-top-button:hover {       
+       background-color:  $guardian-brand-dark;
+}

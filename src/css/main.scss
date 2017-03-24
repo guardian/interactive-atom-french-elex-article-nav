@@ -2,6 +2,8 @@
 @import "fonts";
 @import 'bower_components/guss-grid-system/_grid-system.scss';
 @import 'palette';
+@import 'back-to-top';
+
 $bg-color: $news-main-2;
 
 $rollover-transition: 500ms;
@@ -68,7 +70,7 @@ body {
         @include mq(mobileLandscape){
             height: 240px;
             margin-top:240px;
-            padding:10px;
+            padding:6px 10px;
         }
 
         @include mq (desktop){
